@@ -1,0 +1,8 @@
+
+export ETH_HOME=/home/Eth/2
+#/usr/bin/geth  --port 30303 --networkid 44222 --datadir "/home/Eth/2" --unlock"0x3f25fe82c7b3c117f617d92924cb0f4b484a89f5" --password "/home/Eth/2/keystore/password.txt" --allow-insecure-unlock --vmdebug --syncmode 'full' --rpc --rpcport8545 --rpcaddr "0.0.0.0" --nat "any"  --rpccorsdomain "*" --rpcapi "eth,net,web3,personal,miner,debug,txpool,admin" --mine --gasprice 0 --bootnodes "enode://8141db72565bb1722f82da790baaef3c85639a0e9d4c2982dd4efe48068dd3aff943bcb6affd572b5c91cf52f1507f733036eb8a62a847e0553e67b222acf323@10.192.119.132:30301,enode://59d93063c9ba4dddecd5e536e5c8b728099c2503e4830cfc7e60b28b9b7d24d08ad2283235e0d86a7a2726766fec1c09629572a6dda519c3b2d587599c8b4450@193.2.44.222:30301" --ethstats "node 2:Eth2Stat@10.192.119.137:3000" 2>>/home/Eth/2/log/eth2-node2.log
+
+/usr/bin/geth  --port 30304 --networkid 44222 --datadir "/home/Eth/2" --unlock "0x3f25fe82c7b3c117f617d92924cb0f4b484a89f5" --password "/home/Eth/2/keystore/password.txt" --allow-insecure-unlock --vmdebug --syncmode 'full' --rpc --rpcport 8546 --rpcaddr "0.0.0.0" --nat "any"  --rpccorsdomain "*" --rpcapi "eth,net,web3,personal,miner,debug,txpool,admin" --mine --gasprice 0 --nat extip:193.2.44.222 --bootnodes "enode://59d93063c9ba4dddecd5e536e5c8b728099c2503e4830cfc7e60b28b9b7d24d08ad2283235e0d86a7a2726766fec1c09629572a6dda519c3b2d587599c8b4450@193.2.44.222:30301,enode://8141db72565bb1722f82da790baaef3c85639a0e9d4c2982dd4efe48068dd3aff943bcb6affd572b5c91cf52f1507f733036eb8a62a847e0553e67b222acf323@193.2.44.223:30302" --ethstats "node2:Eth2Stat@10.192.119.137:3000" 2>>/home/Eth/2/log/eth2-node2.log
+
+
+
