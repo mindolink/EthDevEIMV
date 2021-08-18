@@ -1,0 +1,17 @@
+[Unit]
+Description=Geth
+
+[Service]
+Type=simple
+User=root
+Group=root
+Environment=ETH_HOME=/home/blazo/EthDev/GethComande
+Environment=HOME=/home/blazo/EthDev/GethComande
+Restart=always
+RestartSec=60
+ExecStart=/bin/bash /home/blazo/EthDev/NodeGethComande/FN1.sh
+#/usr/bin/geth  --port 30303 --networkid 44222 --datadir "/home/Eth/2" --unlock "0x47f2e44e806f5b5c33726270d5fdbf1e73c80189" --password "/home/Eth/2/keystore/password.txt" --allow-insecure-unlock --vmdebug --syncmode 'full' --rpc --rpcport 8545 --rpcaddr "0.0.0.0" --nat "any"  --rpccorsdomain "*" --rpcapi "eth,net,web3,personal,miner,debug,txpool,admin" --mine --gasprice 0 --bootnodes "enode://8141db72565bb1722f82da790baaef3c85639a0e9d4c2982dd4efe48068dd3aff943bcb6affd572b5c91cf52f1507f733036eb8a62a847e0553e67b222acf323@10.192.119.132:30301" --ethstats "node1:Eth2Stat@10.192.119.137:3000" 2>>/home/Eth/2/log/eth2-node1.log
+
+
+[Install]
+WantedBy=default.target
