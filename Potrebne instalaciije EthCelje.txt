@@ -1,0 +1,5 @@
+
+
+
+bootnode -nodekey /home/blazo/EthDevEIMV/BootNodeKey/boot.key -verbosity 9 -addr :30303
+

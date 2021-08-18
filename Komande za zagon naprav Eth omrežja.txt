@@ -1,0 +1,16 @@
+
+
+
+
+#Zagon BootNode
+	bootnode -nodekey /home/blazo/EthDevEIMV/BootNodeKey/boot.key -verbosity 9 -addr :31313
+
+#Zagon Full Node
+
+geth --datadir "/home/blazo/EthNetEIMV/PoA5s" --syncmode "full" --networkid 1994 --port 50501--http --http.addr "localhost" --http.corsdomain "https://remix.ethereum.org" --http.port 8545 --nat "any" --http.api "web3,eth,net,personal,miner,debug,txpool,admin" 
+--bootnodes "enode://6fc40cc679ca8cbafe1045e1c106c15e86db463e6e89f985ccb7103bfb1fdafe8cbd94daaca5e3a6934d437fcb60ab07d6aa374ee9496308e3f8d321cd3604ef@10.191.110.91:31313" --keystore /home/blazo/EthDevEIMV/BootNodeKey/
+--password /home/pi/EthOmrezje/UserHash/password.sec --allow-insecure-unlock --vmdebug
+
+
+
+geth --datadir "/home/pi/EthOmrezje/Network/PoA5s"  --mine --miner.etherbase 1 --unlock 1 --port 50501 --ethstats node1:test@89.142.195.19:3000 --syncmode "full" --networkid 1994 --http --http.addr "localhost" --http.corsdomain "https://remix.ethereum.org" --http.port 8545 --nat "any" --http.api "web3,eth,net,personal,miner,debug,txpool,admin" --bootnodes "enode://19c8fd97b5edc99f97170462400a38c2e7c9347c1a96e15b7f623562b9d0a637e2a70b749077c38d1a07b34f802985521403eb6b69bf30806993a1623c53be10@89.142.195.19:31313" --keystore /home/pi/EthOmrezje/UserHash/ --password /home/pi/EthOmrezje/UserHash/password.sec --allow-insecure-unlock --vmdebug
